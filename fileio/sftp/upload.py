@@ -45,7 +45,7 @@ def main(argv):
 
     with pysftp.Connection(host=host, port=port, username=user, password=password) as sftp:
 
-        print("uploading %s to " % (localpath, path))
+        print("uploading %s to %s" % (localpath, path))
         start = datetime.datetime.now()
         sftp.put(localpath, path)
         elapsed = datetime.datetime.now() - start
